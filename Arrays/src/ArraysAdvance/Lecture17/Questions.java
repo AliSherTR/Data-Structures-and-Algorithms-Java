@@ -66,14 +66,33 @@ public class Questions {
         }
         printArray(arr);
     }
+     // 5) Rotate the given array "a" by k steps where k is a positive integer and the value of k can be greater than the length of the array
+    static int[] rotate(int[] arr , int k) {
+        int n = arr.length;
+        int[] ans = new int[n];
+        if(k==0) return arr;
+        k = k % n;
+        System.out.println(k);
+        int j = 0;
+
+        for(int i = n -k ; i < n ; i++) {
+            ans[j++] = arr[i];
+        }
+        for(int i = 0 ; i < n - k ; i++) {
+            ans[j++] = arr[i];
+        }
+        return ans;
+    }
     public static void main(String[] args) {
 
-        int a = 3;
+          int a = 3;
         int b = 9;
         int[] arr = {1 , 2 , 3 ,4  ,5 };
 //        reverseArray(arr);
 //        swapTemp(a , b);
 //        swap( a , b);
-        reverseInplace(arr);
+//        reverseInplace(arr);
+        int[] ans = rotate(arr, 5);
+        printArray(ans);
     }
 }
