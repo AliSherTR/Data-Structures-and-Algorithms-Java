@@ -33,8 +33,6 @@ public class LinkedList {
             start = n;
             start.next = temp;
         }
-
-
     }
 
     public void printList() {
@@ -51,15 +49,13 @@ public class LinkedList {
         Node n2 = new Node(9);
         Node n3 = new Node(8);
         Node n4 = new Node(16);
-//        list.insertAtStart(n2);
+        Node n5 = new Node(19);
         list.insertAtEnd(head); // 5
         list.insertAtEnd(n1);   // 5 -> 3
         list.insertAtEnd(n2);   // 5 -> 3 -> 9
         list.insertAtEnd(n3);   // 5 -> 3 -> 9 -> 8
         list.insertAtEnd(n4);   // 5 -> 3 -> 9 -> 8 -> 16
-//        list.insertAtStart(n2);
-// this creates an infinite loop why?
-
+        list.insertAtStart(n5); // 19 -> 5 -> 3 -> 9 -> 8 -> 16
 
         // print the list to ensure all the nodes are added correctly
         list.printList();
